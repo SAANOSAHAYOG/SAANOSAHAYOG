@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*Event*/
+Route::get('/viewevent' , 'Backend\EventController@viewevent')->name('viewevent');
+Route::get('/createevent' , 'Backend\EventController@createevent')->name('createevent');
+Route::post('/storeevent' , 'Backend\EventController@storeevent')->name('storeevent');
+Route::get('/editevent/{id}' , 'Backend\EventController@editevent')->name('editevent');
+Route::post('/updateevent/{id}' , 'Backend\EventController@updateevent')->name('updateevent');
+Route::get('/deleteevent/{id}' , 'Backend\EventController@deleteevent')->name('deleteevent');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
