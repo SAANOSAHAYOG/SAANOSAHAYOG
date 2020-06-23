@@ -11,7 +11,8 @@ class EventController extends Controller
 {
     public function viewevent()
     {
-      	return view('admin.event.view');
+      $dataevent = Event::all();
+      return view('admin.event.home',compact('dataevent'));
     }
     public function createevent()
     {
@@ -37,6 +38,14 @@ class EventController extends Controller
    		$event->description =  $request->description;
    		$event->image = $request->image;
 
+      //save our image
+         if(Input::hasFile('image')){
+        $file=Input::file('image');
+        $destinationPath = 'uploads';
+        $file->move($destinationPath,$file->getClientOriginalName());
+        $event->image=$file->getClientOriginalName();
+      }
+
       
    		// dd($event);
    		$event->save();
@@ -52,7 +61,7 @@ class EventController extends Controller
 	{
 		$event = Event::find($id);
 
-		$event->location = $request->location;
+		  $event->location = $request->location;
    		$event->startdate = $request->startdate;
    		$event->starttime =  $request->starttime;
    		$event->enddate = $request->enddate;
@@ -60,6 +69,14 @@ class EventController extends Controller
    		$event->eventname = $request->eventname;
    		$event->description =  $request->description;
    		$event->image = $request->image;
+
+      //save our image
+         if(Input::hasFile('image')){
+        $file=Input::file('image');
+        $destinationPath = 'uploads';
+        $file->move($destinationPath,$file->getClientOriginalName());
+        $event->image=$file->getClientOriginalName();
+      }
 
 		$event->save();
 
