@@ -18,10 +18,12 @@ class CreateEventsTable extends Migration
             $table->string('location');
             $table->string('startdate');
             $table->string('starttime');
-            $table->string('enddate');
-            $table->string('endtime');
+            $table->string('enddate')->nullable();
+            $table->string('endtime')->nullable();
             $table->string('eventname')->unique();
             $table->string('description');
+            $table->string('image');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }
