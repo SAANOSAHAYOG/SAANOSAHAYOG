@@ -11,9 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us');
+
+Route::get('/event','Frontend\SaanoController@Event')->name('event');
+
+Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
+
+Route::get('/index','Frontend\SaanoController@Index')->name('index');
+
+/*Blog*/
+Route::get('/viewblog' , 'Backend\BlogController@viewblog')->name('viewblog');
+Route::get('/createblog' , 'Backend\BlogController@createblog')->name('createblog');
+Route::post('/storeblog' , 'Backend\BlogController@storeblog')->name('storeblog');
+Route::get('/editblog/{id}' , 'Backend\BlogController@editblog')->name('editblog');
+Route::post('/updateblog/{id}' , 'Backend\BlogController@updateblog')->name('updateblog');
+Route::get('/deleteblog/{id}' , 'Backend\BlogController@deleteblog')->name('deleteblog');
 
 /*Event*/
 Route::get('/viewevent' , 'Backend\EventController@viewevent')->name('viewevent');

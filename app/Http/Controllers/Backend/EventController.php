@@ -37,6 +37,7 @@ class EventController extends Controller
    		$event->eventname = $request->eventname;
    		$event->description =  $request->description;
    		$event->image = $request->image;
+      $event->status = $request->status;
 
       //save our image
          if(Input::hasFile('image')){
@@ -69,6 +70,7 @@ class EventController extends Controller
    		$event->eventname = $request->eventname;
    		$event->description =  $request->description;
    		$event->image = $request->image;
+      $event->status = $request->status;
 
       //save our image
          if(Input::hasFile('image')){
