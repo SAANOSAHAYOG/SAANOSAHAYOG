@@ -31,6 +31,7 @@ class BlogController extends Controller
    		$blog->date = $request->date;
    		$blog->description =  $request->description;
    		$blog->image = $request->image;
+   		$blog->status = $request->status;
 
       //save our image
          if(Input::hasFile('image')){
@@ -59,6 +60,7 @@ class BlogController extends Controller
    		$blog->date = $request->date;
    		$blog->description =  $request->description;
    		$blog->image = $request->image;
+   		$blog->status = $request->status;
 
       //save our image
         if(Input::hasFile('image')){

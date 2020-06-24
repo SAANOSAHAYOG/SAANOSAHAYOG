@@ -11,17 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-/*Event*/
-Route::get('/viewevent' , 'Backend\EventController@viewevent')->name('viewevent');
-Route::get('/createevent' , 'Backend\EventController@createevent')->name('createevent');
-Route::post('/storeevent' , 'Backend\EventController@storeevent')->name('storeevent');
-Route::get('/editevent/{id}' , 'Backend\EventController@editevent')->name('editevent');
-Route::post('/updateevent/{id}' , 'Backend\EventController@updateevent')->name('updateevent');
-Route::get('/deleteevent/{id}' , 'Backend\EventController@deleteevent')->name('deleteevent');
+
+Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us');
+
+Route::get('/event','Frontend\SaanoController@Event')->name('event');
+
+Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
+
+Route::get('/index','Frontend\SaanoController@Index')->name('index');
 
 /*Blog*/
 Route::get('/viewblog' , 'Backend\BlogController@viewblog')->name('viewblog');
@@ -30,6 +28,14 @@ Route::post('/storeblog' , 'Backend\BlogController@storeblog')->name('storeblog'
 Route::get('/editblog/{id}' , 'Backend\BlogController@editblog')->name('editblog');
 Route::post('/updateblog/{id}' , 'Backend\BlogController@updateblog')->name('updateblog');
 Route::get('/deleteblog/{id}' , 'Backend\BlogController@deleteblog')->name('deleteblog');
+
+/*Event*/
+Route::get('/viewevent' , 'Backend\EventController@viewevent')->name('viewevent');
+Route::get('/createevent' , 'Backend\EventController@createevent')->name('createevent');
+Route::post('/storeevent' , 'Backend\EventController@storeevent')->name('storeevent');
+Route::get('/editevent/{id}' , 'Backend\EventController@editevent')->name('editevent');
+Route::post('/updateevent/{id}' , 'Backend\EventController@updateevent')->name('updateevent');
+Route::get('/deleteevent/{id}' , 'Backend\EventController@deleteevent')->name('deleteevent');
 
 Auth::routes();
 
