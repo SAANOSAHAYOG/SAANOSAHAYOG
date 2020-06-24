@@ -23,6 +23,14 @@ Route::get('/editevent/{id}' , 'Backend\EventController@editevent')->name('edite
 Route::post('/updateevent/{id}' , 'Backend\EventController@updateevent')->name('updateevent');
 Route::get('/deleteevent/{id}' , 'Backend\EventController@deleteevent')->name('deleteevent');
 
+/*Blog*/
+Route::get('/viewblog' , 'Backend\BlogController@viewblog')->name('viewblog');
+Route::get('/createblog' , 'Backend\BlogController@createblog')->name('createblog');
+Route::post('/storeblog' , 'Backend\BlogController@storeblog')->name('storeblog');
+Route::get('/editblog/{id}' , 'Backend\BlogController@editblog')->name('editblog');
+Route::post('/updateblog/{id}' , 'Backend\BlogController@updateblog')->name('updateblog');
+Route::get('/deleteblog/{id}' , 'Backend\BlogController@deleteblog')->name('deleteblog');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
