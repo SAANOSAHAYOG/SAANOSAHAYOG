@@ -14,6 +14,16 @@ class EventTest extends TestCase
 
     /** @test */
 
+    public function event_displays_the_events_list()
+    {
+        $response = $this->get('/event');
+
+        $response->assertStatus(200);
+        $response->assertViewIs('saanosahayog.event');
+    }
+
+    /** @test */
+
     public function admin_can_create_events_with_valid_input()
     {
         $response = $this->post('/storeevent', [
@@ -88,7 +98,7 @@ class EventTest extends TestCase
         ]);
 
         $this->assertEquals('Hamro Saano Prayas', Event::first()->eventname);
-        $this->assertEquals('Hamro Saano Sahayog', Event::first()->eventdescription);
+        $this->assertEquals('Hamro Saano Sahayog', Event::first()->description);
         $response->assertRedirect('/viewevent');
     }
 
