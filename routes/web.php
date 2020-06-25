@@ -17,6 +17,8 @@ Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us')
 
 Route::get('/event','Frontend\SaanoController@Event')->name('event');
 
+Route::get('/event-detail/{id}', 'Frontend\SaanoController@eventDetail')->name('event-detail');
+
 Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
 
 Route::get('/index','Frontend\SaanoController@Index')->name('index');
