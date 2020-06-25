@@ -8,11 +8,9 @@
 		<!-- Stylesheet -->
     	<link rel="stylesheet" type="text/css" href="{{ url('public/saanosahayog/css/style.css') }}">
 	</head>
+	@include('saanosahayog.includes.header')
 	<body>
-		@include('saanosahayog.includes.header')
-		<div class="container">
   			@yield('content')
-		</div>
 		@include('saanosahayog.includes.footer')
 	</body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
