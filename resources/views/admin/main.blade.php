@@ -58,6 +58,17 @@
         </li>
         <li class="treeview">
             <a href="#">
+              <i class="fa fa-address-book"></i> <span>Join Event</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+            <li><a href="{{ url('/viewapplyevent')}}"><i class="fa fa-circle"></i>View Join Event</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
               <i class="fa fa-address-book"></i> <span>Blog</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
