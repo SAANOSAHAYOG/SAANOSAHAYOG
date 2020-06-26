@@ -23,6 +23,10 @@ Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
 
 Route::get('/index','Frontend\SaanoController@Index')->name('index');
 
+/*JoinEvent*/
+Route::get('/viewapplyevent' , 'Backend\ApplyeventController@viewapplyevent')->name('viewapplyevent');
+Route::post('/storeapplyevent' , 'Backend\ApplyeventController@storeapplyevent')->name('storeapplyevent');
+
 /*Blog*/
 Route::get('/viewblog' , 'Backend\BlogController@viewblog')->name('viewblog');
 Route::get('/createblog' , 'Backend\BlogController@createblog')->name('createblog');

@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<!-- Stylesheet -->
     	<link rel="stylesheet" type="text/css" href="{{ url('public/saanosahayog/css/style.css') }}">
+    	
 	</head>
 	@include('saanosahayog.includes.header')
 	<body>
