@@ -15,13 +15,15 @@
 
 Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us');
 
+Route::get('/blog' , 'Frontend\SaanoController@Blog')->name('blog');
+
 Route::get('/event','Frontend\SaanoController@Event')->name('event');
 
 Route::get('/event-detail/{id}', 'Frontend\SaanoController@eventDetail')->name('event-detail');
 
 Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
 
-Route::get('/index','Frontend\SaanoController@Index')->name('index');
+Route::get('/','Frontend\SaanoController@Index')->name('index');
 
 /*JoinEvent*/
 Route::get('/viewapplyevent' , 'Backend\ApplyeventController@viewapplyevent')->name('viewapplyevent');

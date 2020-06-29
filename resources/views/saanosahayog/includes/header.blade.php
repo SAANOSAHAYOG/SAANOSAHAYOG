@@ -1,9 +1,9 @@
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{{ url('/index') }}">SAANO SAHAYOG</a>
+      <a class="navbar-brand" href="{{ url('/') }}">SAANO SAHAYOG</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="{{ url('/index') }}">Home</a></li>
+      <li class="active"><a href="{{ url('/') }}">Home</a></li>
       {{-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">Page 1-1</a></li>
@@ -13,6 +13,7 @@
       </li> --}}
       <li><a href="{{ url('/about-us') }}">About Us</a></li>
       <li><a href="{{ url('/event') }}">Event</a></li>
+      <li><a href="{{url('/blog') }}">Blog</a></li>
       <li><a href="{{ url('/contact-us') }}">Contact Us</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
