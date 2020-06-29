@@ -33,6 +33,11 @@ class SaanoController extends Controller
         return view ('saanosahayog.applyevent' , compact('getevent'));
     }
 
+    public function Blog()
+    {
+        return view('saanosahayog.blog');
+    }
+
     public function Contact()
     {
         return view('saanosahayog.contact-us');
