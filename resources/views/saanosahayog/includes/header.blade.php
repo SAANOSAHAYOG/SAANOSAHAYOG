@@ -1,23 +1,25 @@
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{ url('/') }}">SAANO SAHAYOG</a>
+  <!-- Header Section Begin -->
+  <header class="header-section">
+    <div class="container">
+      <div class="logo">
+        <a href="{{ url('/') }}">
+          <img src="{{ url('public/saanosahayog/img/logo.png') }}" alt="">
+        </a>
+      </div>
+      <div class="nav-menu">
+        <nav class="mainmenu mobile-menu">
+          <ul>
+            <li class="active"><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ url('/about-us') }}">About</a></li>
+            <li><a href="{{-- {{ url('/team') }} --}}">Team</a></li>
+            <li><a href="{{ url('/event') }}">Events</a></li>
+            <li><a href="{{ url('/blog') }}">Blog</a></li>
+            <li><a href="{{ url('/contact-us') }}">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="primary-btn top-btn" data-toggle="modal" data-target="#login"><i class="fa fa-user"></i> Login</a>
+      </div>
+      <div id="mobile-menu-wrap"></div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="{{ url('/') }}">Home</a></li>
-      {{-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li> --}}
-      <li><a href="{{ url('/about-us') }}">About Us</a></li>
-      <li><a href="{{ url('/event') }}">Event</a></li>
-      <li><a href="{{url('/blog') }}">Blog</a></li>
-      <li><a href="{{ url('/contact-us') }}">Contact Us</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
+  </header>
+  <!-- Header End -->
