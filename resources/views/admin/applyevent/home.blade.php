@@ -30,7 +30,6 @@
           <th>Full Name</th>
           <th>Email</th>
           <th>Phone</th>
-          <th>Address</th>
         </tr>
       </thead>
       <tbody>
@@ -41,7 +40,6 @@
         <td>{{ $fn->name }} </td>
         <td>{{ $fn->email }}</td>
         <td>{{ $fn->phone }} </td>
-        <td>{{ $fn->address }}</td>
 
       </tr>
       @endforeach
@@ -53,7 +51,6 @@
       <th>Full Name</th>
       <th>Email</th>
       <th>Phone</th>
-      <th>Address</th>
     </tr>
     </tfoot>
   </table>
