@@ -10,7 +10,9 @@ class SaanoController extends Controller
 {
     public function Index()
     {
-        return view('saanosahayog.index');
+        $getevent = Event::where('status','=', 1)
+                      ->orderBy('id','desc')->take(4)->get();
+        return view('saanosahayog.index' , compact('getevent'));
     }
 
     public function About()

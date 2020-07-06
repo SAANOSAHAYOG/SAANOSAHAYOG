@@ -3,45 +3,55 @@
 
 	<section id="call-to-action" class="wow fadeIn">
 		<div class="container text-center">
-			<h1>Event</h1>
-			<p>It's not what you achieve, it's what you overcome.</p>
+			<div class="breadcrumb-text">
+				<h2>Our Upcoming Events</h2>
+				<div class="bt-option">
+					<a href="#">Home</a>
+					<span>Events</span>
+				</div>
+			</div>
 		</div>
 	</section>
-
-<section class="event">
-		 <div class="container">
-
-		 <header class="section-header wow fadeInUp">
-          <h1 class="care-header">Current Event</h1>
-          <p></p>
-        </header>
-
-		 <div class="table-responsive">
-		  <table class="table table-hover">
-		    <tbody>
-		    	@foreach ($getevent as $event)
-		      <tr class="tableevent">
-		        <td class="dataevent">{{ $event->eventname }}</td>
-		        <td class="dataevent">{{ $event->location }}</td>
-		        <td class="dataevent">{{ $event->startdate }}</td>
-		        <th><a href="{{ url('event-detail/'.$event->id) }}"  class="btn btn-warning warningdesign">Join</a></th>
-		      </tr>
-		      @endforeach
-		    </tbody>
-		    <style>
-		    	.dataevent{
-		    		color:#2b3b4a;
-		    		font-size:15px;
-		    	}
-		    	.warningdesign {
-    color: #212529;
-    background-color: #ea2814;
-    border-color: #151108;
-    color: white;
-		    	}
-		    </style>
-		  </table>
+	<section class="schedule-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+                    <div class="schedule-tab">    
+				<div class="tab-content">
+					<div class="tab-pane active" id="tabs-1" role="tabpanel">
+						<div class="st-content">
+							<div class="container">
+                                        <div class="row">
+									@foreach ($getevent as $event)
+									<div class="col-lg-3">
+										<div class="sc-pic">
+											<img src="{{ url('/uploads/'.$event->image) }}" alt="">
+										</div>
+									</div>
+									<div class="col-lg-5">
+										<div class="sc-text">
+											<h4>{{ $event->eventname }}</h4>
+											<ul>
+												<li><i class="fa fa-map-marker"></i> {{ $event->location}}
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<ul class="sc-widget">
+											<li><i class="fa fa-clock-o"></i> {{ $event->startdate}} - {{ $event->enddate}}
+												</li>
+											<li><i class="fa fa-clock-o"></i>{{ $event->starttime}} - {{ $event->endtime}}</li>
+											<li><i class="fa fa-hand-o-up"><a href="{{ url('event-detail/'.$event->id) }}" class="btn btn-info warningdesign">Join</a></i></li>
+										</ul>
+									</div>
+									@endforeach
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 @endsection

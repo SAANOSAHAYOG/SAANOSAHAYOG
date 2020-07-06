@@ -711,17 +711,6 @@ ol {
   position: relative;
 }
 
-.schedule-tab .st-content .sc-text ul li:last-child:after {
-  display: none;
-}
-
-.schedule-tab .st-content .sc-text ul li:after {
-  position: absolute;
-  right: -18px;
-  top: 0;
-  content: "/";
-}
-
 .schedule-tab .st-content .sc-text ul li i {
   color: #f44949;
   font-size: 14px;
@@ -745,6 +734,35 @@ ol {
   position: absolute;
   left: 0;
   top: 7px;
+}
+a.btn.btn-info.warningdesign {
+    margin-left: 8px;
+    background-image: linear-gradient(to right, #ee8425 0%, #f9488b 100%), linear-gradient(to right, #ee8425 0%, #f9488b 100%);
+    border-radius: 50px;
+}
+.appevent {
+    padding: 25px 50px;
+    font-weight: 400;
+    font-size: 16px;
+}
+h1.event-header {
+    font-size: 30px;
+    margin: 20px;
+    font-family: Arial;
+    color: black;
+    padding: 0 20px;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-color: #a5d549;
+}
+.two-colums {
+    padding-bottom: 80px;
+}
+.text-apply {
+    margin-bottom: 30px;
+}
+.text-apply p {
+    margin: 35px;
 }
 
 /*---------------------
