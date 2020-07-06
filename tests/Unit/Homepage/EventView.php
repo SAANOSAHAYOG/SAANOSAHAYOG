@@ -44,4 +44,22 @@ class EventView extends TestCase
 
     }
     
+    /** @test */
+
+    public function user_can_join_the_events()
+    {
+        $response = $this->post('/storeapplyevent', [
+            'eventname' => 'Saano Prayas',
+            'name' => 'Nobody',
+            'email' => 'nobody@gmil.com',
+            'phone' => '9898737383',
+            'address' => 'Nowhere',
+        ]);
+
+        $applyevent = Applyevent::first();
+        $this->assertCount(1, Applyevent::all());
+    }
+
 }
+    
+
