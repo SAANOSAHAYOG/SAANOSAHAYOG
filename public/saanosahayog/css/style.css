@@ -755,6 +755,17 @@ h1.event-header {
     border-left-style: solid;
     border-color: #a5d549;
 }
+h4.event-header {
+    font-size: 30px;
+    margin: 20px;
+    font-family: Arial;
+    color: black;
+    padding: 0 20px;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-color: #a5d549;
+}
+
 .two-colums {
     padding-bottom: 80px;
 }

@@ -27,10 +27,10 @@ class ApplyeventController extends Controller
    		$applyevent->name = $request->name;
    		$applyevent->email = $request->email;
    		$applyevent->phone =  $request->phone;
-   		$applyevent->address = $request->address;
 
    		 // dd($applyevent);
    		$applyevent->save();
-   		return redirect()->back();
+      session()->flash('success','Thank you for Applying Successfully!!');
+   		return redirect()->oute('saanosahayog.event');
    }
 }
