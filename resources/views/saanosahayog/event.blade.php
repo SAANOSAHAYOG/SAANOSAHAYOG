@@ -12,6 +12,17 @@
 			</div>
 		</div>
 	</section>
+	@if(Session::has('success') && !empty(Session::get('success')))
+      <ul>
+        <div class="old">
+          <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                 <i class="icon fa fa-check"></i> {{ Session::get('success')}}
+              </div>
+          
+        </div>
+      </ul>
+      @endif
 	<section class="schedule-section spad">
 		<div class="container">
 			<div class="row">

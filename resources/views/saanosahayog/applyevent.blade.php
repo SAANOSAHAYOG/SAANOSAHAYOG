@@ -47,6 +47,7 @@
 									@endforeach
 									<div class="col=lg-12">
 									<div class="appevent">
+										<h4 class="event-header">Details</h4>
 										{!! $event->description !!}
 									</div>
 								</div>
