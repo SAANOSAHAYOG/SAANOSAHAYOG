@@ -88,6 +88,3 @@
       </div>
    </section>
 @endsection
-Chat conversation end
-Type a message...
-
