@@ -48,19 +48,6 @@
     </div>
 </section>
 <!-- Hero Section End -->
-<!-- Counter Section Begin -->
-<section class="counter-section bg-gradient">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="counter-text">
-                    <h3>An international non-governmental organization (INGO) extends the concept of a non-governmental organization (NGO) to an international scope. </h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Counter Section End -->
 <!-- Home About Section Begin -->
 <section class="home-about-section spad">
     <div class="container">
@@ -184,7 +171,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="schedule-tab">
-                    
+
                     <div class="tab-content">
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="st-content">
