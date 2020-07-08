@@ -1,109 +1,90 @@
 @extends('saanosahayog.main')
-
 @section('content')
-    <!--Login Section End-->
-   
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
 
-                <div class="modal fade" role="dialog" id="login">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title">Login</h3>
-                            </div>
-            
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="email">
-                                </div>    
-                                <div class="form-group">
-                                    <input type="password" name="password" class="form-control" placeholder="password">
-                                </div>
-            
-                                <div class="modal-footer">
-                                    <button type="submit" class="site-btn">Login</button>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <p>Don't have an account?<a href="#" class="ha-btn" data-toggle="modal" data-target="#register">Register</a></p>
-                                    
-                                </div>
-                            </div>    
-                        </div>
-            
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-
-                <div class="modal fade" role="dialog" id="register">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title">Register</h3>
-                            </div>
-            
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="name">
-                                </div>  
-                                
-                                <div class="form-group">
-                                    <input type="text" name="address" class="form-control" placeholder="address">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="number" name="phone" class="form-control" placeholder="phone">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="email">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="password" name="password" class="form-control" placeholder="password">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="password" name="conpassword" class="form-control" placeholder="confirm password">
-                                </div>
-            
-                                <div class="modal-footer">
-                                    <button type="submit" class="site-btn">Register</button>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <p>Already have an account?<a href="#" class="ha-btn" data-toggle="modal" data-target="#login">Login</a></p>
-                                    
-                                </div>
-                            </div>    
-                        </div>
-            
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-
-
-    </div>
-
-    <!--Login Section End-->
 <section id="call-to-action" class="wow fadeIn">
 	<div class="container text-center">
-		<h1>Contact Us</h1>
-		<p>It's not what you achieve, it's what you overcome.</p>
+		<div class="breadcrumb-text">
+                <h2>Contact Us</h2>
+                <div class="bt-option">
+                    <a href="#">Home</a>
+                    <span>Contact</span>
+                </div>
+            </div>
 	</div>
 </section>
 
-@endsection
+    <section class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2>Location</h2>
+                        <p>Get directions to our head-office</p>
+                    </div>
+                    <div class="cs-text">
+                        <div class="ct-address">
+                            <span>Address:</span>
+                            <p>Buddha Stupa, Boudhanath Sadak <br />Kathmandu 44600</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>Phone:</span>
+                                (+977)-014376478
+                            </li>
+                            <li>
+                                <span>Email:</span>
+                                info.saanosahayog@gmail.com
+                            </li>
+                        </ul>
+                        <div class="ct-links">
+                            <span>Website:</span>
+                            <p>https://saanosahayog.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="cs-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3531.8655502217543!2d85.3597667!3d27.7214372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bda4a951f0f%3A0x3ddabb234891c3bd!2sBoudha%20Stupa!5e0!3m2!1sen!2snp!4v1593553992896!5m2!1sen!2snp"
+                            height="430" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Form Section Begin -->
+    <section class="contact-from-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Contact Us By Email!</h2>
+                        <p>Fill out the form below to recieve a free and confidential intial consultation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="#" class="comment-form contact-form">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" placeholder="Phone">
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <textarea placeholder="Messages"></textarea>
+                                <button type="submit" class="site-btn">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form Section End -->
