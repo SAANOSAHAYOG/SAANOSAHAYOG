@@ -48,7 +48,6 @@
     </div>
 </section>
 <!-- Hero Section End -->
-
 <!-- Home About Section Begin -->
 <section class="home-about-section spad">
     <div class="container">
