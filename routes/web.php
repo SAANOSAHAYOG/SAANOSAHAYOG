@@ -11,8 +11,6 @@
 |
 */
 
-
-
 Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us');
 
 Route::get('/blog' , 'Frontend\SaanoController@Blog')->name('blog');

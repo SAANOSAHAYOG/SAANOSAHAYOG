@@ -80,6 +80,17 @@
             <li><a href="{{ url('/viewblog')}}"><i class="fa fa-circle"></i>View Blog</a></li>
           </ul>
         </li>
+        <li class="treeview">
+            <a href="#">
+              <i class="fa fa-address-book"></i> <span>Contact</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+            <li><a href="{{ url('/viewcontact')}}"><i class="fa fa-circle"></i>View Detail Contact</a></li>
+          </ul>
+        </li>
       </ul>
     </section>
   </aside>
