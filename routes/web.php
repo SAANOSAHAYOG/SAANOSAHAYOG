@@ -25,6 +25,10 @@ Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
 
 Route::get('/','Frontend\SaanoController@Index')->name('index');
 
+/*Contact us*/
+Route::get('/viewcontact' , 'Backend\ContactController@viewcontact')->name('viewcontact');
+Route::post('/storecontact' , 'Backend\ContactController@storecontact')->name('storecontact');
+
 /*JoinEvent*/
 Route::get('/viewapplyevent' , 'Backend\ApplyeventController@viewapplyevent')->name('viewapplyevent');
 Route::post('/storeapplyevent' , 'Backend\ApplyeventController@storeapplyevent')->name('storeapplyevent');

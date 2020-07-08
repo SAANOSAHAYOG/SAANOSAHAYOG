@@ -1,18 +1,27 @@
 @extends('saanosahayog.main')
 @section('content')
-
-<section id="call-to-action" class="wow fadeIn">
-	<div class="container text-center">
-		<div class="breadcrumb-text">
+    <section id="call-to-action" class="wow fadeIn">
+        <div class="container text-center">
+            <div class="breadcrumb-text">
                 <h2>Contact Us</h2>
                 <div class="bt-option">
                     <a href="#">Home</a>
                     <span>Contact</span>
                 </div>
             </div>
-	</div>
-</section>
-
+        </div>
+    </section>
+    @if(Session::has('success') && !empty(Session::get('success')))
+    <ul>
+        <div class="old">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="icon fa fa-check"></i> {{ Session::get('success')}}
+            </div>
+            
+        </div>
+    </ul>
+    @endif
     <section class="contact-section spad">
         <div class="container">
             <div class="row">
@@ -45,15 +54,14 @@
                 <div class="col-lg-6">
                     <div class="cs-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3531.8655502217543!2d85.3597667!3d27.7214372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bda4a951f0f%3A0x3ddabb234891c3bd!2sBoudha%20Stupa!5e0!3m2!1sen!2snp!4v1593553992896!5m2!1sen!2snp"
-                            height="430" style="border:0;" allowfullscreen=""></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3531.8655502217543!2d85.3597667!3d27.7214372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bda4a951f0f%3A0x3ddabb234891c3bd!2sBoudha%20Stupa!5e0!3m2!1sen!2snp!4v1593553992896!5m2!1sen!2snp"
+                        height="430" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-        <!-- Contact Form Section Begin -->
+    <!-- Contact Form Section Begin -->
     <section class="contact-from-section spad">
         <div class="container">
             <div class="row">
@@ -66,19 +74,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="#" class="comment-form contact-form">
+                    <form action="{{ route('storecontact') }}" method="POST" class="comment-form contact-form" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" placeholder="Name">
+                                <input type="text" name="name" placeholder="Name">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" placeholder="Email">
+                                <input type="text" name="email" placeholder="Email">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" placeholder="Phone">
+                                <input type="text" name="phone" placeholder="Phone">
                             </div>
                             <div class="col-lg-12 text-center">
-                                <textarea placeholder="Messages"></textarea>
+                                <textarea name="message" placeholder="Messages"></textarea>
                                 <button type="submit" class="site-btn">Send Message</button>
                             </div>
                         </div>
@@ -88,4 +97,4 @@
         </div>
     </section>
     <!-- Contact Form Section End -->
-    @endsection
+@endsection
