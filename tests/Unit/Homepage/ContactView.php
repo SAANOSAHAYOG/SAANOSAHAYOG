@@ -1,7 +1,7 @@
 <?php
 
 namespace Tests\Unit\Homepage;
-
+use App\Model\Contact;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -14,4 +14,19 @@ class ContactView extends TestCase
         $response->assertStatus(200);
         $response->assertViewIs('saanosahayog.contact-us');
     }
+  /** @test */
+  public function guest_user_can_fill_contact_form_with_valid_input()
+  {
+      $response = $this->post('/storecontact', [
+          'name' => 'nobody',
+          'email' => 'nobody@gmail.com',
+          'phone' => '9816467436',
+          'message' => 'Saano Prayas',
+      ]);
+      $storecontact = Contact::first();
+      $this->assertCount(1, Contact::all());
+  }
+
 }
+
+
