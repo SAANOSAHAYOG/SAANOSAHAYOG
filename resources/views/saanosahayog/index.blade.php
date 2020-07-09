@@ -1,53 +1,6 @@
 @extends('saanosahayog.main')
 @section('content')
-<!-- Hero Section Begin -->
-<section class="hero-section set-bg">
-    <div id="carouselId" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselId" data-slide-to="1"></li>
-            <li data-target="#carouselId" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img class="img-fluid w-100" src="{{ url('public/saanosahayog/img/first.jpg') }}" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="hero-text">
-                        <span>5 to 9 may 2019, mardavall hotel, New York</span>
-                        <a href="#" class="primary-btn">Donate</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="img-fluid w-100" src="{{ url('public/saanosahayog/img/first.jpg') }}" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="hero-text">
-                        <span>5 to 9 may 2019, mardavall hotel, New York</span>
-                        <a href="#" class="primary-btn">Donate</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="img-fluid w-100" src="{{ url('public/saanosahayog/img/first.jpg') }}" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="hero-text">
-                        <span>5 to 9 may 2019, mardavall hotel, New York</span>
-                        <a href="#" class="primary-btn">Donate</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section>
-<!-- Hero Section End -->
+
 <!-- Home About Section Begin -->
 <section class="home-about-section spad">
     <div class="container">
@@ -210,75 +163,7 @@
             </div>
         </section>
         <!-- Event Section End -->
-        <!-- Pricing Section Begin -->
-        <section class="pricing-section set-bg spad" style="background-image: url('public/saanosahayog/img/pricing-bg.jpg');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title">
-                            <h2>Donate</h2>
-                            <p>Get your event ticket plan</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-8">
-                        <div class="price-item">
-                            <h4>Food</h4>
-                            <div class="pi-price">
-                                <h2><span>$</span>129</h2>
-                            </div>
-                            <ul>
-                                <li>One Day Conference Ticket</li>
-                                <li>Coffee-break</li>
-                                <li>Lunch and Networking</li>
-                                <li>Keynote talk</li>
-                                <li>Talk to the Editors Session</li>
-                            </ul>
-                            <a href="#" class="price-btn">Donate <span class="arrow_right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-8">
-                        <div class="price-item top-rated">
-                            <div class="tr-tag">
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <h4>Clothes</h4>
-                            <div class="pi-price">
-                                <h2><span>$</span>199</h2>
-                            </div>
-                            <ul>
-                                <li>One Day Conference Ticket</li>
-                                <li>Coffee-break</li>
-                                <li>Lunch and Networking</li>
-                                <li>Keynote talk</li>
-                                <li>Talk to the Editors Session</li>
-                                <li>Lunch and Networking</li>
-                                <li>Keynote talk</li>
-                            </ul>
-                            <a href="#" class="price-btn">Donate <span class="arrow_right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-8">
-                        <div class="price-item">
-                            <h4>Toys</h4>
-                            <div class="pi-price">
-                                <h2><span>$</span>79</h2>
-                            </div>
-                            <ul>
-                                <li>One Day Conference Ticket</li>
-                                <li>Coffee-break</li>
-                                <li>Lunch and Networking</li>
-                                <li>Keynote talk</li>
-                                <li>Talk to the Editors Session</li>
-                            </ul>
-                            <a href="#" class="price-btn">Donate <span class="arrow_right"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Pricing Section End -->
+        
         <!-- latest BLog Section Begin -->
         <section class="latest-blog spad">
             <div class="container">
