@@ -11,6 +11,7 @@
                     <ul>
                         <li class="active"><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('/about-us') }}">About</a></li>
+                        <li><a href="{{ url('/donate') }}">Donate</a></li>
                         {{-- <li><a href="{{ url('/team') }}">Team</a></li> --}}
                         <li><a href="{{ url('/event') }}">Events</a></li>
                         <li><a href="{{ url('/blog') }}">Blog</a></li>

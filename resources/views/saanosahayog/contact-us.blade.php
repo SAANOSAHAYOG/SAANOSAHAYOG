@@ -22,6 +22,7 @@
         </div>
     </ul>
     @endif
+    
     <section class="contact-section spad">
         <div class="container">
             <div class="row">
@@ -74,7 +75,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="{{ route('storecontact') }}" method="POST" class="comment-form contact-form" enctype="multipart/form-data">
+                     <form action="{{ route('storecontact') }}" method="POST" class="comment-form contact-form" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="row">
                             <div class="col-lg-4">
