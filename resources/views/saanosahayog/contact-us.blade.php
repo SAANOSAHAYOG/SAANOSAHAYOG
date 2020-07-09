@@ -1,19 +1,17 @@
 @extends('saanosahayog.main')
 @section('content')
-
-<section id="call-to-action" class="wow fadeIn">
-	<div class="container text-center">
-		<div class="breadcrumb-text">
+    <section id="call-to-action" class="wow fadeIn">
+        <div class="container text-center">
+            <div class="breadcrumb-text">
                 <h2>Contact Us</h2>
                 <div class="bt-option">
                     <a href="#">Home</a>
                     <span>Contact</span>
                 </div>
             </div>
-	</div>
-</section>
-
- @if(Session::has('success') && !empty(Session::get('success')))
+        </div>
+    </section>
+    @if(Session::has('success') && !empty(Session::get('success')))
     <ul>
         <div class="old">
             <div class="alert alert-success alert-dismissible">
@@ -24,7 +22,7 @@
         </div>
     </ul>
     @endif
-
+    
     <section class="contact-section spad">
         <div class="container">
             <div class="row">
@@ -57,15 +55,14 @@
                 <div class="col-lg-6">
                     <div class="cs-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3531.8655502217543!2d85.3597667!3d27.7214372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bda4a951f0f%3A0x3ddabb234891c3bd!2sBoudha%20Stupa!5e0!3m2!1sen!2snp!4v1593553992896!5m2!1sen!2snp"
-                            height="430" style="border:0;" allowfullscreen=""></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3531.8655502217543!2d85.3597667!3d27.7214372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bda4a951f0f%3A0x3ddabb234891c3bd!2sBoudha%20Stupa!5e0!3m2!1sen!2snp!4v1593553992896!5m2!1sen!2snp"
+                        height="430" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-        <!-- Contact Form Section Begin -->
+    <!-- Contact Form Section Begin -->
     <section class="contact-from-section spad">
         <div class="container">
             <div class="row">
@@ -101,4 +98,4 @@
         </div>
     </section>
     <!-- Contact Form Section End -->
-    @endsection
+@endsection

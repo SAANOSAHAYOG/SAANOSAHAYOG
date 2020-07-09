@@ -31,6 +31,6 @@ class ApplyeventController extends Controller
    		 // dd($applyevent);
    		$applyevent->save();
       session()->flash('success','Thank you for Applying Successfully!!');
-   		return redirect()->oute('saanosahayog.event');
+   		return redirect()->route('saanosahayog.event');
    }
 }
