@@ -27,7 +27,7 @@ Route::get('/','Frontend\SaanoController@Index')->name('index');
 
 /*Donate*/
 Route::get('/viewdonate','Backend\DonateController@viewdonate')->name('viewdonate');
-Route::get('/storedonate','Backend\DonateController@storedonate')->name('storedonate');
+Route::post('/storedonate','Backend\DonateController@storedonate')->name('storedonate');
 
 /*Contact us*/
 Route::get('/viewcontact' , 'Backend\ContactController@viewcontact')->name('viewcontact');

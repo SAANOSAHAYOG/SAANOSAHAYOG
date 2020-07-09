@@ -38,9 +38,16 @@ class DonateController extends Controller
    		$donate->donate =  $request->donate;
    		$donate->image =  $request->image;
 
-   		 dd($donate);
+   		//save our image
+         if(Input::hasFile('image')){
+        $file=Input::file('image');
+        $destinationPath = 'uploads';
+        $file->move($destinationPath,$file->getClientOriginalName());
+        $donate->image=$file->getClientOriginalName();
+      }
+
    		$donate->save();
-      	session()->flash('success','Thank you for Donating Us!!');
+      	session()->flash('success','Thank you for your Donation!!');
    		return redirect()->back();
    }
 }
