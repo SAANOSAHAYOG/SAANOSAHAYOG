@@ -19,9 +19,15 @@ Route::get('/event','Frontend\SaanoController@Event')->name('event');
 
 Route::get('/event-detail/{id}', 'Frontend\SaanoController@eventDetail')->name('event-detail');
 
+Route::get('/donate' , 'Frontend\SaanoController@Donate')->name('donate');
+
 Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
 
 Route::get('/','Frontend\SaanoController@Index')->name('index');
+
+/*Donate*/
+Route::get('/viewdonate','Backend\DonateController@viewdonate')->name('viewdonate');
+Route::get('/storedonate','Backend\DonateController@storedonate')->name('storedonate');
 
 /*Contact us*/
 Route::get('/viewcontact' , 'Backend\ContactController@viewcontact')->name('viewcontact');

@@ -13,6 +13,18 @@
 	</div>
 </section>
 
+ @if(Session::has('success') && !empty(Session::get('success')))
+    <ul>
+        <div class="old">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="icon fa fa-check"></i> {{ Session::get('success')}}
+            </div>
+            
+        </div>
+    </ul>
+    @endif
+
     <section class="contact-section spad">
         <div class="container">
             <div class="row">
@@ -66,19 +78,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="#" class="comment-form contact-form">
+                     <form action="{{ route('storecontact') }}" method="POST" class="comment-form contact-form" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" placeholder="Name">
+                                <input type="text" name="name" placeholder="Name">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" placeholder="Email">
+                                <input type="text" name="email" placeholder="Email">
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" placeholder="Phone">
+                                <input type="text" name="phone" placeholder="Phone">
                             </div>
                             <div class="col-lg-12 text-center">
-                                <textarea placeholder="Messages"></textarea>
+                                <textarea name="message" placeholder="Messages"></textarea>
                                 <button type="submit" class="site-btn">Send Message</button>
                             </div>
                         </div>
