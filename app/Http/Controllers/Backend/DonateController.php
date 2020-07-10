@@ -11,7 +11,8 @@ class DonateController extends Controller
 {
     public function viewdonate()
     {
-    	return view('admin.donate.home');
+      $datadonate = Donate::all();
+    	return view('admin.donate.home', compact('datadonate'));
     }
     public function storedonate( Request $request)
     {
