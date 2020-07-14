@@ -208,6 +208,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="load-more blog-more">
+                <a href="#" class="primary-btn">Load More</a>
+            </div>
             </div>
         </section>
         <!-- Event Section End -->

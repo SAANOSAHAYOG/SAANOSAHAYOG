@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Event;
+use App\Model\Blog;
 
 class SaanoController extends Controller
 {
@@ -42,7 +43,17 @@ class SaanoController extends Controller
 
     public function Blog()
     {
-        return view('saanosahayog.blog');
+        $getblog = Blog::where('status','=', 1)
+                   ->orderBy('id','desc')->get();
+        return view('saanosahayog.blog' , compact('getblog'));
+    }
+
+    public function blogDetail($id)
+    {
+        $getblog = Blog::where('id',$id)
+                   ->where('status','=', 1)
+                   ->orderBy('id','desc')->get();
+        return view ('saanosahayog.blog-detail' , compact('getblog'));
     }
 
     public function Contact()
