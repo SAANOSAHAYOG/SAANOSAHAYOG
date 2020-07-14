@@ -13,6 +13,8 @@
 
 Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us');
 
+Route::get('/blog-detail/{id}', 'Frontend\SaanoController@blogDetail')->name('blog-detail');
+
 Route::get('/blog' , 'Frontend\SaanoController@Blog')->name('blog');
 
 Route::get('/event','Frontend\SaanoController@Event')->name('event');
