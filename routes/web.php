@@ -13,6 +13,10 @@
 
 Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us');
 
+Route::get('/volunteer-form','Frontend\SaanoController@Volunteerform')->name('volunteer-form');
+
+Route::get('/volunteer','Frontend\SaanoController@Volunteer')->name('volunteer');
+
 Route::get('/blog-detail/{id}', 'Frontend\SaanoController@blogDetail')->name('blog-detail');
 
 Route::get('/blog' , 'Frontend\SaanoController@Blog')->name('blog');

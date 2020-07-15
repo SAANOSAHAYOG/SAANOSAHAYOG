@@ -56,6 +56,16 @@ class SaanoController extends Controller
         return view ('saanosahayog.blog-detail' , compact('getblog'));
     }
 
+    public function Volunteer()
+    {
+        return view('saanosahayog.volunteer');
+    }
+
+    public function Volunteerform()
+    {
+        return view('saanosahayog.volunteer-form');
+    }
+
     public function Contact()
     {
         return view('saanosahayog.contact-us');

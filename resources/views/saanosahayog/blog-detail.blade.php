@@ -17,14 +17,14 @@
             <div class="container">
                 <div class="row">
                 	@foreach ($getblog as $blog)
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                             <div class="bi-text">
                                     <h2>{{ $blog->title }}</h2>
                                     <span><i class="fa fa-clock-o"></i> {{ $blog->date }}</span>
                                     <p>{!! $blog->description !!}</p>
                                </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                     	<img src="{{ url('/uploads/'.$blog->image) }}" alt="">
                     </div>
                     @endforeach
