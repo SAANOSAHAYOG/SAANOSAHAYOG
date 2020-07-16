@@ -32,6 +32,10 @@ Route::get('/about-us','Frontend\SaanoController@About')->name('about-us');
 Route::get('/','Frontend\SaanoController@Index')->name('index');
 
 /*Donate*/
+Route::get('/viewvolunteer','Backend\VolunteerController@viewvolunteer')->name('viewvolunteer');
+Route::post('/storevolunteer','Backend\VolunteerController@storevolunteer')->name('storevolunteer');
+
+/*Donate*/
 Route::get('/viewdonate','Backend\DonateController@viewdonate')->name('viewdonate');
 Route::post('/storedonate','Backend\DonateController@storedonate')->name('storedonate');
 

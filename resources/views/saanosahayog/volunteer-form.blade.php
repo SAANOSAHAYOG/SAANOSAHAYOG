@@ -12,6 +12,18 @@
             </div>
         </div>
     </section>
+
+        @if(Session::has('success') && !empty(Session::get('success')))
+      <ul>
+        <div class="old">
+          <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                 <i class="icon fa fa-check"></i> {{ Session::get('success')}}
+              </div>
+          
+        </div>
+      </ul>
+      @endif
     
     <section class="contact-from-section spad">
         <div class="container">
@@ -24,7 +36,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="" method="POST" class="comment-form contact-form" enctype="multipart/form-data">
+                    <form action="{{ route('storevolunteer') }}" method="POST" class="comment-form contact-form" enctype="multipart/form-data">
+                                {{ csrf_field() }}
                         <div class="row">
                             <div class="col-lg-4">
                                 <label>Full Name</label>
@@ -59,7 +72,7 @@
                                 <textarea name="learn" maxlength="500" rows="10" cols="30"></textarea>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <button type="submit" class="site-btn">Send Message</button>
+                                <button type="submit" class="site-btn">Register</button>
                             </div>
                         </div>
                     </form>
