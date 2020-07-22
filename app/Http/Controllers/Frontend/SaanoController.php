@@ -70,4 +70,9 @@ class SaanoController extends Controller
     {
         return view('saanosahayog.contact-us');
     }
+
+    public function DonateUs()
+    {
+        return view('saanosahayog.stripe');
+    }
 }

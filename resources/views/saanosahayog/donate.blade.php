@@ -19,7 +19,7 @@
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <i class="icon fa fa-check"></i> {{ Session::get('success')}}
             </div>
-            
+
         </div>
     </ul>
     @endif
@@ -100,7 +100,7 @@
                     <button class="site-btn">Drop Off</button>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <button class="site-btn">Cash Donation</button>
+                    <button onclick="{{ url('/contact-us') }}" class="site-btn">Cash Donation</button>
                 </div>
             </div>
             <br>
