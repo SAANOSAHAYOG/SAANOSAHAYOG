@@ -11,6 +11,8 @@
 |
 */
 
+Route::post('/search', 'HomeController@search')->name('search');
+
 Route::get('/contact-us','Frontend\SaanoController@Contact')->name('contact-us');
 
 Route::get('/volunteer-form','Frontend\SaanoController@Volunteerform')->name('volunteer-form');
