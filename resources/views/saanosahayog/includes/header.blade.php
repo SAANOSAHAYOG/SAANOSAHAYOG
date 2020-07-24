@@ -8,6 +8,11 @@
             </div>
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
+                    <form action="{{ route('search') }}" method="POST">
+                        @csrf
+                        <input type="text" name="query" />
+                        <input type="submit" class="btn btn-sm btn-primary" value="Search" />
+                    </form>
                     <ul>
                         <li class="active"><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="{{ url('/about-us') }}">About</a></li>
