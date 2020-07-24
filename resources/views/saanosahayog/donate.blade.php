@@ -100,7 +100,7 @@
                     <button class="site-btn">Drop Off</button>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <button onclick="{{ url('/contact-us') }}" class="site-btn">Cash Donation</button>
+                    <a href="{{ url('/stripe') }}"><button class="site-btn">Cash Donation</button></a>
                 </div>
             </div>
             <br>
