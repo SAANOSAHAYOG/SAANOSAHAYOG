@@ -71,7 +71,7 @@ class SaanoController extends Controller
         return view('saanosahayog.contact-us');
     }
 
-    public function DonateUs()
+    public function Stripe()
     {
         return view('saanosahayog.stripe');
     }
