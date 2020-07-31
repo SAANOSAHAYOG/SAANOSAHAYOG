@@ -26,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return view('home');
         $blogs = Blog::with('description')->get();
         return view('home', compact('blogs'));
 
@@ -35,6 +36,8 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
+        
+
         $searchResults = (new Search())
             ->registerModel(Blog::class, 'title')
             ->registerModel(Event::class, 'location')
