@@ -4,9 +4,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Donate</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+	<section id="call-to-action" class="wow fadeIn">
+		<div class="container text-center">
+			<div class="breadcrumb-text">
+				<h2>Donate Us</h2>
+				<div class="bt-option">
+					<a href="#">Home</a>
+					<span>Donate</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	@if(Session::has('success') && !empty(Session::get('success')))
+      <ul>
+        <div class="old">
+          <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                 <i class="icon fa fa-check"></i> {{ Session::get('success')}}
+              </div>
+
+        </div>
+      </ul>
+      @endif
+
     <style type="text/css">
         .panel-title {
         display: inline;
@@ -25,20 +49,6 @@
         }
     </style>
 </head>
-
-<section id="call-to-action" class="wow fadeIn">
-    <div class="container text-center">
-        <div class="breadcrumb-text">
-            <h2>Donate</h2>
-            <div class="bt-option">
-                <a href="#">Home</a>
-                <span>Donate</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <body>
 
 <div class="container">
