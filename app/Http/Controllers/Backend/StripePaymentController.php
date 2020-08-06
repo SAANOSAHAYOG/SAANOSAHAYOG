@@ -27,11 +27,11 @@ class StripePaymentController extends Controller
     public function stripePost(Request $request)
     {
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        Stripe\Charge::create ([
-                "amount" => 100 * 100,
-                "currency" => "usd",
-                "source" => $request->stripeToken,
-                "description" => "Donate."
+        Stripe\Charge::create([
+            "amount" => 100 * 100,
+            "currency" => "usd",
+            "source" => $request->stripeToken,
+            "description" => "Saano Sahayog Donation."
         ]);
 
         Session::flash('success', 'Payment successful!');
