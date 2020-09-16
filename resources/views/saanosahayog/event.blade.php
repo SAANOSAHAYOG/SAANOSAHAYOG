@@ -1,4 +1,4 @@
-@extends('saanosahayog.main')
+@extends('saanosahayog.home')
 @section('content')
 
 	<section id="call-to-action" class="wow fadeIn">

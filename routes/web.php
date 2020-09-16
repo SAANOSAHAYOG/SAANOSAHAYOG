@@ -27,10 +27,6 @@ Route::get('/event','Frontend\SaanoController@Event')->name('event');
 
 Route::get('/event-detail/{id}', 'Frontend\SaanoController@eventDetail')->name('event-detail');
 
-Route::get('/stripe', 'Backend\StripePaymentController@stripe');
-
-Route::post('/stripe', 'Backend\StripePaymentController@stripePost')->name('stripe.post');
-
 Route::get('/stripe', 'Frontend\SaanoController@Stripe')->name('stripe');
 
 Route::get('/donate' , 'Frontend\SaanoController@Donate')->name('donate');
