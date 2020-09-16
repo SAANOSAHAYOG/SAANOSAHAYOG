@@ -5,7 +5,7 @@
             <div class="breadcrumb-text">
                 <h2>Contact Us</h2>
                 <div class="bt-option">
-                    <a href="#">Home</a>
+                    <a href="{{ url('/') }}">Home</a>
                     <span>Contact</span>
                 </div>
             </div>

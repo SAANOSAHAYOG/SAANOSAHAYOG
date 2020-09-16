@@ -25,6 +25,8 @@ Route::get('/blog', 'Frontend\SaanoController@Blog')->name('blog');
 
 Route::get('/event', 'Frontend\SaanoController@Event')->name('event');
 
+Route::get('/profile', 'Frontend\SaanoController@Profile')->name('profile');
+
 Route::get('/event-detail/{id}', 'Frontend\SaanoController@eventDetail')->name('event-detail');
 
 Route::get('/stripe', 'Frontend\SaanoController@Stripe')->name('stripe');

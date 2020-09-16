@@ -5,7 +5,7 @@
 			<div class="breadcrumb-text">
 				<h2>Our Upcoming Events</h2>
 				<div class="bt-option">
-					<a href="#">Home</a>
+					<a href="{{ url('/home') }}">Home</a>
 					<span>Events</span>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-@extends('saanosahayog.main')
+@extends('saanosahayog.home')
 @section('content')
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 			<div class="breadcrumb-text">
 				<h2>Donate Us</h2>
 				<div class="bt-option">
-					<a href="#">Home</a>
+					<a href="{{ url('/home') }}">Home</a>
 					<span>Donate</span>
 				</div>
 			</div>

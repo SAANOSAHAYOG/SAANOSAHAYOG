@@ -1,4 +1,4 @@
-@extends('saanosahayog.main')
+@extends('saanosahayog.home')
 @section('content')
 
     <section id="call-to-action" class="wow fadeIn">
@@ -6,7 +6,7 @@
             <div class="breadcrumb-text">
                 <h2>Volunteer Form</h2>
                 <div class="bt-option">
-                    <a href="#">Volunteer</a>
+                    <a href="{{ url('/home') }}">Volunteer</a>
                     <span>Volunteer Form</span>
                 </div>
             </div>

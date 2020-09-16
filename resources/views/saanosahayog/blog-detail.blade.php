@@ -6,7 +6,7 @@
             <div class="breadcrumb-text">
                 <h2>Blog Detail</h2>
                 <div class="bt-option">
-                    <a href="#">Blog</a>
+                    <a href="{{ url('/') }}">Blog</a>
                     <span>Blog Detail</span>
                 </div>
             </div>
