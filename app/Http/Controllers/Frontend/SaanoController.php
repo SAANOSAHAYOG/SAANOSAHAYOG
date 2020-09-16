@@ -41,6 +41,11 @@ class SaanoController extends Controller
         return view ('saanosahayog.applyevent' , compact('getevent'));
     }
 
+    public function Profile()
+    {
+        return view('saanosahayog.profile');
+    }
+
     public function Blog()
     {
         $getblog = Blog::where('status','=', 1)

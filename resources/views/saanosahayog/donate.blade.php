@@ -6,7 +6,7 @@
             <div class="breadcrumb-text">
                 <h2>Donate</h2>
                 <div class="bt-option">
-                    <a href="#">Home</a>
+                    <a href="{{ url('/home') }}">Home</a>
                     <span>Donate</span>
                 </div>
             </div>

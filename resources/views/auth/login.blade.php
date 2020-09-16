@@ -4,7 +4,7 @@
 <div class="container">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">{{ __('Login') }}</div>
+            <div class="card-header site-btn">{{ __('Login') }}</div>
             <div class="card-body">
                 <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                     @csrf
