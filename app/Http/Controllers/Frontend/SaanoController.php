@@ -26,6 +26,11 @@ class SaanoController extends Controller
         return view('saanosahayog.donate');
     }
 
+    public function Dropoff()
+    {
+        return view('saanosahayog.dropoff');
+    }
+
     public function Event()
     {
         $getevent = Event::where('status','=', 1)
