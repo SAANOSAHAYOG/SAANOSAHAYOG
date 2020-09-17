@@ -97,7 +97,7 @@
             <br>
             <div class="row">
                 <div class="col-lg-6 text-center">
-                    <button class="site-btn">Drop Off</button>
+                    <a href="{{ url('/dropoff') }}"><button class="site-btn">Drop Off</button></a>
                 </div>
                 <div class="col-lg-6 text-center">
                     <a href="{{ url('/stripe') }}"><button class="site-btn">Cash Donation</button></a>

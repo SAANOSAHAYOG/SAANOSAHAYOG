@@ -46,9 +46,9 @@
 							</div>
 						</div>
 						<hr>
-						<div class="row">
+						{{-- <div class="row">
 							<a href=""><button class="col-md-4 offset-md-4 site-btn">Update Profile</button></a>
-						</div>
+						</div> --}}
 						
 					</div>
 				</div>

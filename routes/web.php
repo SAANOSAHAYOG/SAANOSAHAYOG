@@ -31,6 +31,8 @@ Route::get('/event-detail/{id}', 'Frontend\SaanoController@eventDetail')->name('
 
 Route::get('/stripe', 'Frontend\SaanoController@Stripe')->name('stripe');
 
+Route::get('/dropoff', 'Frontend\SaanoController@Dropoff')->name('dropoff');
+
 Route::get('/donate', 'Frontend\SaanoController@Donate')->name('donate');
 
 Route::get('/about-us', 'Frontend\SaanoController@About')->name('about-us');
