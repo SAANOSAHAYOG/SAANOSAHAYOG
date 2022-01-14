@@ -51,6 +51,11 @@ class SaanoController extends Controller
         return view('saanosahayog.profile');
     }
 
+    public function updateProfile()
+    {
+        return view('saanosahayog.updateprofile');
+    }
+
     public function Blog()
     {
         $getblog = Blog::where('status','=', 1)

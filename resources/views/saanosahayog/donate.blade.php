@@ -5,10 +5,6 @@
         <div class="container text-center">
             <div class="breadcrumb-text">
                 <h2>Donate</h2>
-                <div class="bt-option">
-                    <a href="{{ url('/home') }}">Home</a>
-                    <span>Donate</span>
-                </div>
             </div>
         </div>
     </section>

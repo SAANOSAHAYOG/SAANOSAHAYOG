@@ -23,7 +23,7 @@ class EventController extends Controller
     	$event = new Event;
    		$this->validate($request,[
    			'location' => 'required',
-   			'startdate' => 'required',
+   			'startdate' => 'required|date|after:tomorrow',
    			'starttime' => 'required',
    			'eventname' => 'required',
    			'description' => 'required',
@@ -62,6 +62,17 @@ class EventController extends Controller
 	{
 		$event = Event::find($id);
 
+    $this->validate($request,[
+        'location' => 'required',
+        'startdate' => 'required',
+        'starttime' => 'required',
+        'eventname' => 'required',
+        'description' => 'required',
+        //'image' => 'required',
+      ]);
+
+    // dd($request->image);
+
 		  $event->location = $request->location;
    		$event->startdate = $request->startdate;
    		$event->starttime =  $request->starttime;
@@ -69,11 +80,13 @@ class EventController extends Controller
    		$event->endtime = $request->endtime;
    		$event->eventname = $request->eventname;
    		$event->description =  $request->description;
-   		$event->image = $request->image;
       $event->status = $request->status;
 
       //save our image
          if(Input::hasFile('image')){
+
+//dd('yes');
+
         $file=Input::file('image');
         $destinationPath = 'uploads';
         $file->move($destinationPath,$file->getClientOriginalName());

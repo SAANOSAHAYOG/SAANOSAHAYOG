@@ -66,12 +66,27 @@
                 </div>
                 <div class="panel-body">
 
-                    @if (Session::has('success'))
+
+                    {{-- @if (Session::has('success'))
                         <div class="alert alert-success text-center">
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                             <p>{{ Session::get('success') }}</p>
                         </div>
-                    @endif
+                    @endif --}}
+                    @if(Session::has('success') && !empty(Session::get('success')))
+    <ul>
+        <div class="old">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="icon fa fa-check"></i> {{ Session::get('success')}}
+            </div>
+            
+        </div>
+    </ul>
+    @endif
+
+
+
 
                     <form role="form" action="{{ route('stripe.post') }}" method="post" class="require-validation"
                                                      data-cc-on-file="false"
@@ -135,9 +150,9 @@
 
 </body>
 
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+{{-- <script type="text/javascript" src="https://js.stripe.com/v2/"></script> --}}
 
-<script type="text/javascript">
+{{-- <script type="text/javascript">
 $(function() {
     var $form         = $(".require-validation");
   $('form.require-validation').bind('submit', function(e) {
@@ -190,7 +205,7 @@ $(function() {
     }
 
 });
-</script>
+</script> --}}
 </html>
 
 @endsection

@@ -25,7 +25,6 @@ class BlogController extends Controller
    			'title' => 'required',
    			'date' => 'required',
    			'description' => 'required',
-   			'image' => 'required',
    		]);
    		$blog->title = $request->title;
    		$blog->date = $request->date;
@@ -40,8 +39,6 @@ class BlogController extends Controller
         $file->move($destinationPath,$file->getClientOriginalName());
         $blog->image=$file->getClientOriginalName();
       }
-
-      
    		// dd($blog);
    		$blog->save();
    		   session()->flash('success','Inserted Successfully!!');
@@ -55,15 +52,20 @@ class BlogController extends Controller
 	public function updateblog(Request $request, $id)
 	{
 		$blog = Blog::find($id);
+    $this->validate($request,[
+        'title' => 'required',
+        'date' => 'required',
+        'description' => 'required',
+      ]);
 
 		 $blog->title = $request->title;
    		$blog->date = $request->date;
    		$blog->description =  $request->description;
-   		$blog->image = $request->image;
    		$blog->status = $request->status;
 
       //save our image
-        if(Input::hasFile('image')){
+      //save our image
+         if(Input::hasFile('image')){
         $file=Input::file('image');
         $destinationPath = 'uploads';
         $file->move($destinationPath,$file->getClientOriginalName());

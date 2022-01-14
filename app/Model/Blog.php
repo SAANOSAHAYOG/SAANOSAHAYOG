@@ -9,7 +9,7 @@ use Spatie\Searchable\SearchResult;
 class Blog extends Model implements Searchable
 {
     protected $table = 'blogs';
-    protected $fillable = ['title'];
+    protected $fillable = ['title','date','description','image','status'];
 
     public function getSearchResult(): SearchResult
     {

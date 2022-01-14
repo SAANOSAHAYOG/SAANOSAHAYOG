@@ -30,6 +30,7 @@ class ContactController extends Controller
 
    		 //dd($contact);
    		$contact->save();
+      
       	session()->flash('success','Thank you for Contacting Us!!');
    		return redirect()->back();
    }

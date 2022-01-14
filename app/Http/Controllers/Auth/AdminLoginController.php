@@ -36,9 +36,17 @@ class AdminLoginController extends Controller
         return redirect()->back()->withInput($request->only('email', 'remember'));
     }
 
-    public function logout()
+    // public function logout()
+    // {
+    //     Auth::guard('admin')->logout();
+    //     return redirect('/');
+    // }
+    public function logout(Request $request)
     {
-        Auth::guard('admin')->logout();
-        return redirect('/');
+        $this->guard('admin')->logout();
+
+        $request->session()->invalidate();
+
+        return $this->loggedOut($request) ?: redirect(route('admin.login'))->with('message','You have been logged out.');
     }
 }

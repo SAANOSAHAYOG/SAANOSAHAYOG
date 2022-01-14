@@ -195,4 +195,10 @@ $('.textarea').wysihtml5()
 <script>
 $('.select2').select2();
 </script>
+<script>
+function PreviewImage(event) {
+      var preview = document.getElementById('PreviewImageID');
+      preview.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
 </html>

@@ -2310,4 +2310,11 @@ h4.event-header {
     line-height: normal;
   }
 }
-
+form.search {
+    width: min-content;
+}
+a.searchdesign {
+    color: #f65870;
+    font-size: 25px;
+    font-weight: 500;
+}

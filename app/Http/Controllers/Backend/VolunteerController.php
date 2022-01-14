@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Model\Volunteer;
+use App\Notifications\RepliedToThread;
 
 class VolunteerController extends Controller
 {
@@ -38,6 +39,7 @@ class VolunteerController extends Controller
    		$volunteer->learn =  $request->learn;
 
    		$volunteer->save();
+      auth()->user()->notify(new RepliedToThread());
       	session()->flash('success','Thank you for Register Volunteer!!.');
    		return redirect()->back();
     }

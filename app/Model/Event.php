@@ -9,7 +9,7 @@ use Spatie\Searchable\SearchResult;
 class Event extends Model implements Searchable
 {
     protected $table = 'events';
-    protected $fillable = ['location'];
+    protected $fillable = ['location','startdate'.'starttime','enddate','endtime','eventname','description','image','status'];
 
     public function getSearchResult(): SearchResult
     {
@@ -17,7 +17,7 @@ class Event extends Model implements Searchable
 
         return new SearchResult(
             $this,
-            $this->location,
+            $this->eventname,
             $url
          );
     }
